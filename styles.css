@@ -1,0 +1,639 @@
+/* Font for regular paragraphs*/
+@font-face {
+    font-family: 'KyivType';
+    font-weight: 400;
+    src: url('assets/fonts/dmitry_rastvortsev_-_kyivtype_sans_regular-webfont.woff') format('woff'),
+         url('assets/fonts/dmitry_rastvortsev_-_kyivtype_sans_regular-webfont.woff2') format('woff2');
+}
+/* Font for headlines */
+@font-face {
+    font-family: 'KyivType';
+    font-weight: 700;
+    src: url('assets/fonts/dmitry_rastvortsev_-_kyivtype_sans_heavy--webfont.woff') format('woff'),
+         url('assets/fonts/dmitry_rastvortsev_-_kyivtype_sans_heavy--webfont.woff2') format('woff2');
+}
+/* Font for hero-text */
+@font-face {
+    font-family: 'KyivType';
+    font-weight: 350;
+    src: url('assets/fonts/dmitry_rastvortsev_-_kyivtype_sans_regular-webfont.woff') format('woff'),
+         url('assets/fonts/dmitry_rastvortsev_-_kyivtype_sans_regular-webfont.woff2') format('woff2');
+}
+
+html, 
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+h1 {
+    font-family: 'KyivType', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+p {
+    white-space: pre-line;
+    font-family: 'KyivType';
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.p-hero {
+    font-family: 'KyivType', sans-serif;
+    font-weight: 350;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.p-1,
+.p-4 {
+    text-align: right;
+}
+
+header {
+    margin: 1rem;
+    width:90%;
+    height:4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom: solid 3px;
+    border-top: solid 3px;
+}
+
+
+.tablet-img,
+.desktop-img {
+    display:none;
+}
+
+.mobile-img {
+    position: absolute;
+    bottom: 10rem;
+    right: 0;
+    z-index: -1;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translate(-75%, -50%);
+    width: 70%;
+    height: 100%;
+}
+
+.nav-links a {
+    margin: 10px;
+  }
+
+
+nav a {
+    font-family: 'KyivType', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-menu.open {
+    display: block;
+}
+
+.nav-menu li {
+    margin-top:5rem;
+}
+
+
+
+.menuOpener {
+    border: none;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    right:1rem;
+    background-color: transparent;
+    font-family: 'KyivType', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    z-index: 1;
+}
+
+.menuOpener.rotate {
+    transform: rotate(90deg);
+}
+
+.main-page {
+    margin: 1rem;
+}
+
+
+
+.highlight1 {
+    background-color: yellow;
+}
+
+.buy {
+    display:none;
+}
+
+.footer {
+    display:none;
+}
+
+.cookies {
+    display:none;
+}
+
+.darken {
+    display:none;
+}
+
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .mobile-img,
+    .desktop-img {
+        display:none;
+    }
+
+    .tablet-img {
+        display: block;
+        position:absolute;
+        right:15%;
+        top:10%;
+    }
+
+    header {
+        width:95%;
+    }
+
+    .footer {
+        display:none;
+    }
+    
+    .darken {
+        display:none;
+    }
+
+    .cookies {
+        display:none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .footer {
+        display:none;
+    }
+
+    .highlight1 {
+        background-color: transparent;
+    }
+
+    .highlight2 {
+        background-color: #FFF500;
+    }
+
+    p {
+        font-family: 'KyivType', sans-serif;
+        font-size: 16px;
+    }
+
+    .p-hero {
+        font-family: 'KyivType', sans-serif;
+        font-weight: 350;
+        font-size: 45px;
+        line-height: 50px;
+        width:19rem;
+        margin-left: 7rem;
+        margin-top: 1rem;
+    }
+
+    .p-1 {
+        margin-right: 5rem;
+    }
+
+    .p-2 {
+        margin-left: 5rem;
+    }
+
+    .p-4 {
+        margin-right: 13rem;
+    }
+
+    
+}
+
+/* Wider tablets + laptops */
+@media screen and (min-width: 1025px) and (max-width: 1400px) {
+
+    body {
+        margin:0;
+        padding:0;
+        overflow: auto;
+    }
+    
+    .header {
+        width:98%;
+    }
+
+    .footer {
+        display:block;
+    }
+
+    .highlight3 {
+        color: #973EFF;
+    }
+
+    .mobile-img,
+    .tablet-img {
+        display:none;
+    }
+
+    .desktop-img {
+        display: initial;
+        position:absolute;
+        top:1rem;
+        right:1rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .main-page {
+        display: flex;
+        flex-wrap: wrap;
+     }
+
+    .p-hero {
+        position: absolute;
+        left: 5rem;
+        top: 3rem;
+        font-size:35px;
+        line-height: 45px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .p-1 {
+        position: absolute;
+        left: 7rem;
+        bottom: 13rem;
+    }
+
+    .p-2 {
+        position: absolute;
+        left: 32rem;
+        bottom: 13rem;
+    }
+
+    .p-4 {
+        position: absolute;
+        right: 8rem;
+        bottom: 13rem;
+        text-align: left;
+        border-bottom: solid 10px #B30044;
+    }
+
+    .header {
+        border-bottom: solid 3px;
+        border-top: solid 3px;
+    }
+
+    .footer {
+        visibility: visible;
+        background-color: #000;
+        height:8rem;
+        position:fixed;
+        bottom:0;
+        width:100%;
+    }
+
+    .email-form {
+        position:absolute;
+        bottom:3rem;
+        left:5rem;
+    }
+
+    .email-input {
+        border-radius: 20px;
+        width: 12rem;
+    }
+
+    .email-btn {
+        background-color: #B30044;
+        color: #FFF500;
+        border-radius: 20px;
+        border: none;
+        width:5rem;
+        font-family: 'KyivType';
+        font-weight: 400;
+    }
+
+    .email-btn:hover {
+        background-color: #00B308;
+    }
+
+    .email-btn:disabled {
+        background-color: #FFFFFF;
+        color: #000000;
+        cursor: pointer;
+    }
+
+    label {
+        font-family: 'KyivType';
+        font-weight: 700;
+        color:#FFF500;
+    }
+
+    .buy {
+        display:block;
+        width:140px;
+        height:40px;
+        background-color:#000;
+        color: #FFF500;
+        font-family: 'KyivType', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        text-align: center;
+        position: absolute;
+        bottom: 10rem;
+        left: 16rem;
+    }
+
+    .buy:hover {
+        background-color: #FF4B93;
+    }
+
+    .cookies {
+        display: block;
+        background: #FFFFFF;
+        color: #000000;
+        border-radius: 20px;
+        width:30%;
+        height: 20rem;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .cookies p {
+        font-family: 'KyivType';
+        font-weight: 400;
+        text-align: center;
+        margin-top:3rem;
+    }
+
+    .accept,
+    .reject {
+        font-family: 'KyivType';
+        font-weight: 350;
+        border-radius: 20px;
+        width: 6rem;
+    }
+
+    .accept {
+        background-color: #B30044;
+        color: #FFF500;
+        margin-left: 17rem;
+        margin-top: 1rem;
+    }
+
+    .reject {
+        background-color: #FF4B93;
+        color: #FFFFFF;
+        margin-left:1rem;
+        margin-top:1rem;
+    }
+    .darken {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: #000000;
+        opacity: 0.8;
+        z-index: 1;
+    }
+}
+
+/* Wider screens */
+@media screen and (min-width: 1401px) {
+
+    body {
+        margin:0;
+        padding:0;
+        overflow: auto;
+    }
+    
+    .header {
+        width:98%;
+    }
+
+    .footer {
+        display:block;
+    }
+
+    .highlight3 {
+        color: #973EFF;
+    }
+
+    .mobile-img,
+    .tablet-img {
+        display:none;
+    }
+
+    .desktop-img {
+        display: initial;
+        position:absolute;
+        top:1rem;
+        right:1rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .main-page {
+        display: flex;
+        flex-wrap: wrap;
+     }
+
+    .p-hero {
+        position: absolute;
+        left: 5rem;
+        top: 3rem;
+        font-size:35px;
+        line-height: 45px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .p-1 {
+        position: absolute;
+        left: 7rem;
+        bottom: 13rem;
+    }
+
+    .p-2 {
+        position: absolute;
+        left: 40rem;
+        bottom: 13rem;
+    }
+
+    .p-4 {
+        position: absolute;
+        right: 8rem;
+        bottom: 13rem;
+        text-align: left;
+        border-bottom: solid 10px #B30044;
+    }
+
+    .header {
+        border-bottom: solid 3px;
+        border-top: solid 3px;
+    }
+
+    .footer {
+        visibility: visible;
+        background-color: #000;
+        height:8rem;
+        position:fixed;
+        bottom:0;
+        width:100%;
+    }
+
+    .email-form {
+        position:absolute;
+        bottom:3rem;
+        left:5rem;
+    }
+
+    .email-input {
+        border-radius: 20px;
+        width: 12rem;
+    }
+
+    .email-btn {
+        background-color: #B30044;
+        color: #FFF500;
+        border-radius: 20px;
+        border: none;
+        width:5rem;
+        font-family: 'KyivType';
+        font-weight: 400;
+    }
+
+    .email-btn:hover {
+        background-color: #00B308;
+    }
+
+    .email-btn:disabled {
+        background-color: #FFFFFF;
+        color: #000000;
+        cursor: pointer;
+    }
+
+    label {
+        font-family: 'KyivType';
+        font-weight: 700;
+        color:#FFF500;
+    }
+
+    .buy {
+        display:block;
+        width:140px;
+        height:40px;
+        background-color:#000;
+        color: #FFF500;
+        font-family: 'KyivType', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        text-align: center;
+        position: absolute;
+        bottom: 10rem;
+        left: 16rem;
+    }
+
+    .buy:hover {
+        background-color: #FF4B93;
+    }
+
+    .cookies {
+        display: block;
+        background: #FFFFFF;
+        color: #000000;
+        border-radius: 20px;
+        width:30%;
+        height: 20rem;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .cookies p {
+        font-family: 'KyivType';
+        font-weight: 400;
+        text-align: center;
+        margin-top:3rem;
+    }
+
+    .accept,
+    .reject {
+        font-family: 'KyivType';
+        font-weight: 350;
+        border-radius: 20px;
+        width: 6rem;
+    }
+
+    .accept {
+        background-color: #B30044;
+        color: #FFF500;
+        margin-left: 23rem;
+        margin-top: 1.5rem;
+    }
+
+    .reject {
+        background-color: #FF4B93;
+        color: #FFFFFF;
+        margin-left:1rem;
+        margin-top:1rem;
+    }
+    .darken {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: #000000;
+        opacity: 0.8;
+        z-index: 1;
+    }
+}

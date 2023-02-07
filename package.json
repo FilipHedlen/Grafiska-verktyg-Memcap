@@ -1,0 +1,17 @@
+{
+  "name": "kompletteringsuppgift---grafiska-verktyg",
+  "version": "1.0.0",
+  "description": "För Godkänt (jämför kriterierna för VG):",
+  "main": "main.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
