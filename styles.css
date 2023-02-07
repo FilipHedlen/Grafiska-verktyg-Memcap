@@ -85,6 +85,19 @@ ul {
     list-style: none;
 }
 
+/* Very simple animation for the menu */
+@keyframes rotate-and-back {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+
 .nav-menu {
     display: flex;
     flex-direction: column;
@@ -94,6 +107,7 @@ ul {
     transform: translate(-75%, -50%);
     width: 70%;
     height: 100%;
+    animation: rotate-and-back 1s ease-in-out;
 }
 
 .nav-links a {
